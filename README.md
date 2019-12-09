@@ -24,6 +24,14 @@ Para adicionar apenas um arquivo por vez no commit
 ```git add nome_do_arquivo```
 ```git add nome_da_pasta```
 
+Faça o commit das alterações, para persistir as informações
+
+```git commit -m "Mensagem complexa"```
+
+Depois de criar uma fotografia da ultima versão do seu código, envie ao servidor
+
+```git push origin master```
+
 # aulas-javascript
 
 JavaScript priemiro residente em um arquivo HTML
