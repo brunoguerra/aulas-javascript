@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Proway Angular</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="Proway.JavaScript.Team">
+
+  <link rel="stylesheet" href="styles.css?v=1.0">
+
+</head>
+
+<body>
+  <script>
+    /* inline javaScript */
+
+    const a;                          // variável
+    const b = "init";                 // string
+    const c = "Hi" + " " + "Joe";     // = "Hi Joe"
+    const d = 1 + 2 + "3";            // = "33"
+    const e = [2,3,5,8];              // array
+
+    // posso reusar a varível para outro valor, em uma nova atribuição
+    let f = false;                  // boolean
+    let g = /()/;                   // RegEx
+    let h = function(){};           // function object
+    let PI = 3.14;                // constant
+    let a = 1, b = 2, c = a + b;    // one line
+    let z = 'zzz';                  // block scope local variable
+
+  </script>
+
+  <script>  
+    const age = 18;                           // number 
+    const name = "Jane";                      // string
+    const name = {first:"Jane", last:"Doe"};  // object
+    const truth = false;                      // boolean
+    const sheets = ["HTML","CSS","JS"];       // array
+    const a; typeof a;                        // undefined
+    const a = null;                           // value null
+    Objects
+    const student = {                 // object name
+        firstName:"Jane",           // list of properties and values
+        lastName:"Doe",
+        age:18,
+        height:170,
+        fullName : function() {     // object function
+        return this.firstName + " " + this.lastName;
+        }
+    }
+    student.age = 19;           // setting value
+    student[age]++;             // incrementing
+    name = student.fullName();  // call object function
+  </script>
+
+  <script>
+    alert(a);                   // alerta básico (Não muito usado)
+    confirm("Really?");         // Diálogo sim/não, retorna true/false depende do usuário
+    prompt("Your age?","0");    // Pede uma entrada do usuário. 
+  </script>
+  <div class="card" id="card-visitors">
+   <input type="checkbox" id="card-visitors-indicator" />
+   <div class="header">
+        <label class="indicator" for="card-visitors-indicator">
+            <svg class="open" width="18" height="27">
+                <line x1="1.5" y1="12" x2="2" y2="25" stroke-linecap="round" style="stroke: #FFFFFF; stroke-width: 3;" />
+                <line x1="9" y1="7" x2="9" y2="25" stroke-linecap="round" style="stroke: #FFFFFF; stroke-width: 3;" />
+                <line x1="16.5" y1="2" x2="16.5" y2="25" stroke-linecap="round" style="stroke: #FFFFFF; stroke-width: 3;" />
+            </svg>
+            <svg class="close" width="15" height="25">
+                <line x1="1.5" y1="13.5" x2="15" y2="0" style="stroke: #FFFFFF; stroke-width: 3" />
+                <line x1="1.5" y1="11.5" x2="15" y2="25" style="stroke: #FFFFFF; stroke-width: 3" />
+            </svg>
+        </label>
+        <div class="content">
+            <div class="data">
+                <div class="top">
+                <p class="title">Información</p>
+                <p class="date">01 Sep 2016 - 15 Sep 2016</p>
+                </div>
+
+            </div>
+            <p class="title">Today</p>
+            <p class="date">15 Sep 2016</p>
+            <div class="float"></div>
+                    sdfdssdfds
+        </div>
+    </div>
+    </div>
+
+  <form action="javascript: void(0);">
+    <div>
+      Digite seu nome:
+      <input name="nome" placeholder="digite seu nome" />
+    </div>
+    <button onclick="alert(document.getElementsByName('nome')[0].value)" >Clique para enviar</button>
+  </form>
+</body>
+</html>
