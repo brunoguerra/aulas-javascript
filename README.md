@@ -1,3 +1,11 @@
+# Começando com o git básico
+
+Abra o git na pasta que deseja baixar o projeto. Clique com o direito e selecione o "git bash here".
+
+Você começará o prompt
+
+```git clone https://github.com/brunoguerra/aulas-javascript.git```
+
 # aulas-javascript
 
 JavaScript priemiro residente em um arquivo HTML
