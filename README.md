@@ -6,6 +6,11 @@ Você começará o prompt
 
 ```git clone https://github.com/brunoguerra/aulas-javascript.git```
 
+Para atualizar, use o comando pull do git
+```
+git pull origin master
+```
+
 # aulas-javascript
 
 JavaScript priemiro residente em um arquivo HTML
