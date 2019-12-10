@@ -7,38 +7,52 @@
   <title>The HTML5 Proway Angular</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="Proway.JavaScript.Team">
-
-  <link rel="stylesheet" href="styles.css?v=1.0">
-
 </head>
 
 <body>
   <script>
     /* inline javaScript */
-
-    const a;                          // variável
+    /*var z = 0;*/
+    const a = 10 * 5;                          // variável
+    /*
+    // a = 1; dá error tentar atribuir a uma constante
     const b = "init";                 // string
     const c = "Hi" + " " + "Joe";     // = "Hi Joe"
     const d = 1 + 2 + "3";            // = "33"
     const e = [2,3,5,8];              // array
-
+    */
     // posso reusar a varível para outro valor, em uma nova atribuição
-    let f = false;                  // boolean
+    /*
+    const f = true;                  // boolean
     let g = /()/;                   // RegEx
     let h = function(){};           // function object
     let PI = 3.14;                // constant
     let a = 1, b = 2, c = a + b;    // one line
     let z = 'zzz';                  // block scope local variable
 
+    z = "ddd";
+
+    if (f) {
+      console.log('PI', PI)
+    }
+
+    const verdadeiro = 1
+    const falso = 0
+
+    if (verdadeiro) {
+      console.log('Verdadeiro, imprimo Z', z)
+    }
+  */
   </script>
 
   <script>  
+    /*
     const age = 18;                           // number 
-    const name = "Jane";                      // string
+    // const name = "Jane";                      // string
     const name = {first:"Jane", last:"Doe"};  // object
     const truth = false;                      // boolean
     const sheets = ["HTML","CSS","JS"];       // array
-    const a; typeof a;                        // undefined
+    // const a; typeof a;                        // undefined
     const a = null;                           // value null
     Objects
     const student = {                 // object name
@@ -53,12 +67,15 @@
     student.age = 19;           // setting value
     student[age]++;             // incrementing
     name = student.fullName();  // call object function
+    */
   </script>
 
   <script>
-    alert(a);                   // alerta básico (Não muito usado)
+    
     confirm("Really?");         // Diálogo sim/não, retorna true/false depende do usuário
-    prompt("Your age?","0");    // Pede uma entrada do usuário. 
+    const idade = prompt("Qual sua idade?","34");    // Pede uma entrada do usuário. 
+    alert(idade);                   // alerta básico (Não muito usado)
+    
   </script>
   <div class="card" id="card-visitors">
    <input type="checkbox" id="card-visitors-indicator" />
