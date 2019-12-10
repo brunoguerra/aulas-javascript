@@ -57,7 +57,13 @@
 
       // resolver aqui:
       // if ...
-      
+      if ((num1 > num2) && (num1 > num3) && (num1 > num3)) {
+        console.log('Número 1 maior, ', num1)
+      } else if (num2 > num3) {
+        console.log('Número 2 maior, ', num2)
+      } else {
+        console.log('Número 3 maior, ', num3)
+      }
 
       //
     }
@@ -69,12 +75,12 @@
       /* document.write('<b>Olá Mundo</b>') */
     </script>
 
-    <form>
+    <form action="javaScript: void(0);">
       <label>Número 1: <input name="num1" id="input_num1" /></label>
       <br />
       <label>Número 2: <input name="num2" id="input_num2"/></label>
       <br />
-      <label>Número 3: <input name="num2" id="input_num2"/></label>
+      <label>Número 3: <input name="num2" id="input_num3"/></label>
 
       <button onclick="calcula_maior()">Calcular</button>
 
