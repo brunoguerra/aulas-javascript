@@ -21,7 +21,7 @@ app.post('/salvar', function(req, res) {
 })
 
 app.get('/sucesso', function(req, res) {
-  res.sendFile('sucesso.html')
+  res.sendFile(__dirname + '/sucesso.html')
 })
 
 app.listen(3000, function () {
