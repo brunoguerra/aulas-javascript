@@ -14,25 +14,61 @@
   <script>
     /* inline javaScript */
     /* 1) imprima olá mundo console.log ou document.write */
-    // resolução
-    // console.log('Olá Mundo')
+    // resolução:
+    console.log('Olá Mundo')
     // /* document.write('Olá mundo') */
     // alert('Olá Mundo')
 
-    /* (3) Faça uma saída de soma de 2 inteiros, ex: alert(2 + 2)  */
+    /* (2) Faça uma saída de soma de 2 inteiros, ex: alert(2 + 2)  */
     // entrada = parseInt(prompt('digite um número'))
     // saída = console.log(nome_da_variavel, 'Texto direto', 'infinitos argumentos') ou alert(nome_da_variavel)
+    // resolução:
+    /*
+    const num1 = parseInt(prompt('Digite um número inteiro'))
+    const num2 = parseInt(prompt('Digite um número inteiro'))
+    console.log(num1 + num2)
+    */
 
-    /* (4) Peça ao usuário dois números com o prompt, e converta com o parseInt.
+    /* (3) Peça ao usuário dois números com o prompt, e converta com o parseInt.
           Diga qual número é o maior */
+    
+    /*resolução:*/
+    /*
+    const num1 = parseInt(prompt('Digite um número inteiro'))
+    const num2 = parseInt(prompt('Digite um número inteiro'))
+    if (num1 > num2) {
+      console.log('O primeiro é maior, ', num1)
+    } else {
+      console.log('O segundo é maior, ', um2)
+    }*/
 
-
+    /* (4) Pegar dois números no formulário html, nos campos input.
+      Como:
+        const num1 = parseInt(document.getElementById('input_num1').value)
+        const num2 = parseInt(document.getElementById('input_num2').value)
+    Faça uma saída de soma de 2 inteiros, ex: alert(2 + 2)  */
+    // entrada = parseInt(prompt('digite um número'))
+    // saída = console.log(nome_da_variavel, 'Texto direto', 'infinitos argumentos') ou alert(nome_da_variavel)
+    // resolução:
+    const num1 = parseInt(document.getElementById('input_num1').value)
+    const num2 = parseInt(document.getElementById('input_num2').value)
+    const num3 = parseInt(document.getElementById('input_num3').value)
+    
   </script>
 
   <section class="cabecalho">
     <script>
       /* document.write('<b>Olá Mundo</b>') */
     </script>
+
+    <form>
+      <label>Número 1: <input name="num1" id="input_num1" /></label>
+      <br />
+      <label>Número 2: <input name="num2" id="input_num2"/></label>
+      <br />
+      <label>Número 3: <input name="num2" id="input_num2"/></label>
+
+    </form>
   </section>
 </body>
 </html>
