@@ -13,6 +13,9 @@ const client = new Client({
 })
 client.connect()
 
+const queryCreate = client.query('CREATE TABLE IF NOT EXISTS people(id SERIAL PRIMARY KEY, name VARCHAR(100), email VARCHAR(100) not null)')
+queryCreate.then(data => console.log('Tabela People criada ', data))
+
 console.log('Ola Node.JS')
 
 function home(req, res) {
