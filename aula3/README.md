@@ -61,8 +61,36 @@ ionic build
 Para isso, iremos chamar o comando ```ionic capacitor add andoid``` para android,
 ```ionic capacitor add ios``` para iOS.
 
+Para rodar diretamente após build:
 ```
 ionic cordova run android
 ```
 
-Para rodar diretamente após build:
+
+Editar as variáveis de sistema e adicionar o seguinte:
+```
+ANDROID_SDK_PATH
+```
+o caminho do sdk do Android está no Android Studio -> Settings -> Behaviour and settings -> Android SDK
+
+Adicionar esses caminhos na varíavel de PATH
+```
+%ANDROID_SDK_PATH\tool\bin
+%ANDROID_SDK_PATH\platform-tools
+%ANDROID_SDK_PATH\emulator
+%ANDROID_SDK_PATH\build\tools
+```
+
+build-tools apenas na hora de assinar o apk, mas já vamos deixar configurado
+
+
+É preciso também instalar o native-run para rodar nos dispositivos, tanto reais quanto virtuais.
+
+```
+npm i -g native-run
+```
+
+
+
+
+
