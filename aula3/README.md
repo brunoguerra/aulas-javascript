@@ -52,5 +52,17 @@ const App: React.FC = () => (
 
 # Adicionar a capacidade de rondar no Android ou iOS.
 
+Primeiro é preciso fazer o build do app.
+
+```bash
+ionic build
+```
+
 Para isso, iremos chamar o comando ```ionic capacitor add andoid``` para android,
 ```ionic capacitor add ios``` para iOS.
+
+```
+ionic cordova run android
+```
+
+Para rodar diretamente após build:
