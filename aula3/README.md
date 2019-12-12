@@ -63,7 +63,7 @@ Para isso, iremos chamar o comando ```ionic capacitor add andoid``` para android
 
 Para rodar diretamente após build:
 ```
-ionic cordova run android
+ionic capacitor run android
 ```
 
 
@@ -88,6 +88,12 @@ build-tools apenas na hora de assinar o apk, mas já vamos deixar configurado
 
 ```
 npm i -g native-run
+```
+
+Abrir o virtual device na linha de comando:
+
+```
+npx cap open android
 ```
 
 

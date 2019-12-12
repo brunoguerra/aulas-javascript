@@ -1,5 +1,0 @@
-{"name":"Paulo","phone":"05r0283098","email":"pppppp@gmail.com","message":"Message"}
-{"name":"Alberto","phone":"05r0283098","email":"pppppp@gmail.com","message":"Message"}
-{"name":"Jorge","phone":"05r0283098","email":"jorge@gmail.com","message":"Message"}
-{"name":"Jorge Matheus","phone":"0wer9qrq09wer","email":"jorgematheus@gmail.com","message":"Vou me inscrever"}
-{"name":"Jorge Matheus","phone":"0wer9qrq09wer","email":"jorgematheus@gmail.com","message":"Vou me inscrever"}
