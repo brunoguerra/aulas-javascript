@@ -79,5 +79,9 @@ exports.routes = (app) => {
         
         
     })
+    
+    app.get('/sucesso', function(req, res) {
+        res.sendFile(__dirname + '/sucesso.html')
+    })
 
 }

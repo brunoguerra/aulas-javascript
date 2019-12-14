@@ -13,15 +13,8 @@ app.use(express.json())
 console.log('Ola Node.JS')
 
 
-
-
-/* */
-
+/* configura as rotas da nossa API */
 routes(app)
-
-app.get('/sucesso', function(req, res) {
-  res.sendFile(__dirname + '/sucesso.html')
-})
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
