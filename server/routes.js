@@ -22,6 +22,13 @@ exports.routes = (app) => {
                 statusCode: 200,
             })
         })
+        query.catch(err => {
+            console.log('Error on insert card', err)
+            res.json({
+                status: 'ERROR server',
+                statusCode: 500,
+            })
+        })
     })
 
 
