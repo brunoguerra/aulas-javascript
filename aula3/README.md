@@ -97,6 +97,10 @@ npx cap open android
 ```
 
 
+Rodar o código no dispositivo:
+```
+ionic capacitor run android
+```
 
 Rodar o código em modo atualizações automáticas no emulador
 ```
@@ -105,6 +109,20 @@ ionic capacitor run android -l
 
 Para rodar no dispositivo
 ```
-ionic capacitor run android --livereload-url=http://192.168.0.83:8100 --external
+ionic capacitor run android --livereload-url=http://<SeuIpNaMesmaRedeDoCelular>:8100 --external
 ```
+
+Redicionar portas do emulador para o PC
+```
+adb reverse tcp:8100 tcp:8100
+```
+
+Fix android manisfest, dentro da tag application:
+```xml
+<application
+  ...
+  android:usesCleartextTraffic="true"
+>
+```
+
 
