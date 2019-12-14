@@ -31,6 +31,21 @@ exports.routes = (app) => {
         })
     })
 
+    app.get('/objectives', (req, res) => {
+        query = db.query('SELECT * FROM cards')
+        query.then(data => {
+            console.log('objectives response', data.rows)
+            res.json(data.rows)
+        })
+        query.catch(err => {
+            console.log('Error on get cards data', err)
+            res.json({
+                status: 'ERROR server',
+                statusCode: 500,
+            }, { status: 500 })
+        })
+    })
+
 
     app.post('/salvar', function(req, res) {
         console.log('Entrou em salvar')
