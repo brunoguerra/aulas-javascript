@@ -108,6 +108,3 @@ Para rodar no dispositivo
 ionic capacitor run android --livereload-url=http://192.168.0.83:8100 --external
 ```
 
-
-
-
