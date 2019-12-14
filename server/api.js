@@ -2,6 +2,7 @@ const express = require('express')
 const fetch = require('node-fetch')
 const fs = require('fs')
 const { Client } = require('pg')
+const routes = require('routes')
 
 var app = express()
 app.use(express.urlencoded({ extended: false }))
@@ -23,12 +24,17 @@ function home(req, res) {
   res.sendFile(__dirname + '/index.html')
 }
 
+routes(app)
+
 app.get('/', home)
 
 app.post('/salvar', function(req, res) {
-  console.log('Entrou em salvar')
-  console.log(req.url)
-  console.log(req.body)
+  // console.log(req.url) para imprimir a url relativa a esta chamada
+  // aqui está obvio que trará /salvar, mas se chamarmos uma função
+  // com req como argumento, exemplo controller_salvar('client', req, res)
+  // ou seja, estamos encaminhando o req, que recebemos como argumento,
+  // nele encontramos todos os detalhes da chamada
+  // console.log(req.body)
 
   // Exemplo
   // fs.appendFile(
