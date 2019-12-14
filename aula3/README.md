@@ -97,6 +97,10 @@ npx cap open android
 ```
 
 
+Rodar o código no dispositivo:
+```
+ionic capacitor run android
+```
 
 Rodar o código em modo atualizações automáticas no emulador
 ```
