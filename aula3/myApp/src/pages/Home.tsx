@@ -14,8 +14,35 @@ import {
   IonCardHeader,
   IonInput,
   IonButton,
+  IonFab,
+  IonFabButton,
+  IonIcon,
+  IonFabList,
  } from '@ionic/react';
 import React from 'react';
+
+
+import { add } from 'ionicons/icons'
+
+
+function meu_evento_de_click() {
+  console.log('clicou')
+  window.location.href = "/outraRota"
+}
+
+const varParaPaginaAdicionar = () => {
+  window.location.href = '/adicionar'
+}
+
+// const onClick = () => console.log('clicou')
+
+export const BotaoFlutuante: React.FC = () => (
+    <IonFab vertical="center" horizontal="end" slot="fixed">
+      <IonFabButton color="">
+        <IonIcon icon={add} onClick={varParaPaginaAdicionar} />
+      </IonFabButton>
+    </IonFab>
+);
 
 const BACKEND_URL = 'http://192.168.0.83:3000'
 
@@ -107,6 +134,7 @@ class Home extends React.Component {
           </IonToolbar>
         </IonHeader>
         <IonContent className="ion-padding">
+          <BotaoFlutuante />
           {/*-- List of Text Items --*/}
           <IonContent>
               {mockDados.map(function(cardContent) {
