@@ -65,6 +65,13 @@ class Home extends React.Component {
     inputCriacao: '',
   }
 
+  // match name of lifecycle
+  componentWillMount() {
+    fetch(BACKEND_URL + '/objectives')
+    .then(response => response.json())
+    .then(listaDeCards => console.log('Cards', listaDeCards))
+  }
+
   onChangeInput = (event:any) => {
     this.setState({
       inputCriacao: event.detail.value
