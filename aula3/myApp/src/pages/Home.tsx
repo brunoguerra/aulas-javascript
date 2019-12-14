@@ -17,6 +17,8 @@ import {
  } from '@ionic/react';
 import React from 'react';
 
+const BACKEND_URL = 'http://192.168.0.83:3000'
+
 const mockDados = [
   {
     title: 'Titulo 1',
@@ -65,15 +67,26 @@ class Home extends React.Component {
 
   onChangeInput = (event:any) => {
     this.setState({
-
+      inputCriacao: event.detail.value
     })
-    console.log(event.detail.value)
   }
 
   createCard = () => {
     const inputValue = this.state.inputCriacao
 
     createCardInMock(inputValue)
+
+    fetch(BACKEND_URL + '/objectives', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        title: inputValue,
+      })
+    }).then(response => response.json())
+    .then(json => console.log('Cadastradado com sucesso', json))
+
     this.setState({})
   }
 
@@ -88,30 +101,32 @@ class Home extends React.Component {
         </IonHeader>
         <IonContent className="ion-padding">
           {/*-- List of Text Items --*/}
-          <IonList>
-            <IonItem >
+          <IonContent>
               {mockDados.map(function(cardContent) {
                 return (
-                  <Card
-                    title={cardContent.title}
-                  />
+                  <IonItem >
+                    <Card
+                      title={cardContent.title}
+                    />
+                  </IonItem>
                 )
               })}
               
-            </IonItem>
-          </IonList>
+            
+
           <IonItem>
             <IonLabel>Criar</IonLabel>
             <IonInput
               placeholder="Digite seu objetivo"
               onIonChange={this.onChangeInput}
-            ></IonInput>
-          </IonItem>
+              ></IonInput>
+            </IonItem>
           <IonButton
             expand="block"
             onClick={this.createCard}
           > Criar
             </IonButton>
+          </IonContent>
 
             
         </IonContent>
