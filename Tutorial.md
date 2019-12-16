@@ -117,6 +117,10 @@ Escreveremos cartões BDD
 Vamos usar o Trello para a organização do desenvolvimento desse
 trabalho.
 
+Convite para o time:
+
+[Trello Board](https://trello.com/invite/b/wQ9zJwWR/cba1402b441d562f7a0d1de60277b630/app-aplica%C3%A7%C3%B5es-h%C3%ADbridas)
+
 ## Trella
 
 
@@ -208,5 +212,7 @@ lista.map(itemDaLista => (
 ...
 
 ## Estado do Component React
+
+Para realizar essa capacidade em nosso aplicativo, utilizaremos o 
 
 ![Ionic Tutorial](https://ionicframework.com/blog/wp-content/uploads/2019/11/ionic-react-hooks.png)
