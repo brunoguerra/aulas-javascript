@@ -46,6 +46,42 @@ exports.routes = (app) => {
         })
     })
 
+    app.get('/objectives/:id', (req, res) => {
+        query = db.query('SELECT * FROM cards WHERE id='+req.params.id)
+        query.then(data => {
+            console.log('objective'+req.params.id+' response', data.rows)
+            res.json(data.rows[0])
+        })
+        query.catch(err => {
+            console.log('Error on get cards data', err)
+            res.json({
+                status: 'ERROR server',
+                statusCode: 500,
+            }, { status: 500 })
+        })
+    })
+
+    app.put('/objectives/:id', (req, res) => {
+        const id = req.params.id
+        const title = req.body.title
+        const description = req.body.description
+
+        query = db.query("UPDATE cards SET title='"+title+"', description='"+description+"' WHERE id="+id)
+        query.then(data => {
+            console.log('data successful', data)
+            res.json({
+                status: 'OK!',
+                statusCode: 200,
+            })
+        })
+        query.catch(err => {
+            console.log('Error on insert card', err)
+            res.json({
+                status: 'ERROR server',
+                statusCode: 500,
+            })
+        })
+    })
 
     app.post('/salvar', function(req, res) {
         console.log('Entrou em salvar')
